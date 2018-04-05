@@ -13,7 +13,7 @@ button:hover {
 
 /* NOTE: video */
 .videoWrapper {
-  position: relative;
+  position: relative; /* this fixes the iphone 100vh white space issue*/
   z-index: -10;
   height: 100vh;
   overflow: auto;
@@ -136,26 +136,51 @@ header img {
   transition: all 1s ease-in-out;
 }
 
-.graphicsDiv .ng-enter{
+/* NOTE: switch animation */
+/* NOTE: forward */
+.forward .ng-enter{
   position: absolute;
   transition: all 1s ease-in-out;
   left: 100%;
 }
 
-.graphicsDiv .ng-enter-active{
+.forward .ng-enter-active{
   transform: translateX(-50%);
   left: 50%;
 }
 
-.graphicsDiv .ng-leave{
+.forward .ng-leave{
   transition: all 1s ease-in-out;
   position: absolute;
   right: 50%;
   transform: translateX(50%);
 }
 
-.graphicsDiv .ng-leave-active{
+.forward .ng-leave-active{
   right: 150%;
+}
+/* NOTE: backward */
+.backward .ng-enter{
+  position: absolute;
+
+  transition: all 1s ease-in-out;
+  right: 100%;
+}
+
+.backward .ng-enter-active{
+  transform: translateX(50%);
+  right: 50%;
+}
+
+.backward .ng-leave{
+  transition: all 1s ease-in-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.backward .ng-leave-active{
+  left: 150%;
 }
 
 /* NOTE: culture */

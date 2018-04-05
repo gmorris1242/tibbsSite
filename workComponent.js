@@ -17,7 +17,7 @@
         <i id="workMenueBtn" class="material-icons close" ng-click="$ctrl.showNav()" ng-show="$ctrl.buttonShow">reorder</i>
       </div>
 
-      <div class="graphicsDiv" ng-switch="$ctrl.switch">
+      <div class="graphicsDiv" ng-switch="$ctrl.switch" ng-class="$ctrl.direction">
         <div class="graphic" ng-switch-when="1">
           <img src="graphics/4.png">
         </div>
@@ -43,6 +43,7 @@
         $ctrl.headerShow = false;
         $ctrl.buttonShow = true;
         $ctrl.switch = 1;
+        $ctrl.direction;
 
         $ctrl.closeNav = function(){
           $ctrl.headerShow = false;
@@ -55,6 +56,7 @@
         };
 
         $ctrl.next = function(){
+          $ctrl.direction = "forward";
           if ($ctrl.switch > 0 && $ctrl.switch < 3)
             {$ctrl.switch += 1;
           }else {
@@ -64,6 +66,7 @@
         }
 
         $ctrl.back = function(){
+          $ctrl.direction = "backward";
           if ($ctrl.switch > 1)
             {$ctrl.switch -= 1;
           }else {
