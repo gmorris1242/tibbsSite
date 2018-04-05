@@ -162,7 +162,6 @@ header img {
 /* NOTE: backward */
 .backward .ng-enter{
   position: absolute;
-
   transition: all 1s ease-in-out;
   right: 100%;
 }
@@ -322,9 +321,11 @@ header img {
 }
 
 .graphicsDiv {
+  /* position: absolute; */
   border: 1px dotted red;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
+  overflow: visible;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,7 +338,8 @@ header img {
 }
 
 .graphic img {
-  width: 100%
+  height: 100%;
+  width: 100%;
 }
 
 /* NOTE: graphic arrows */
@@ -345,6 +347,7 @@ header img {
 .arrowsDiv {
   display: flex;
   justify-content: center;
+  border: dotted green 1px;
 }
 
 .back i{
