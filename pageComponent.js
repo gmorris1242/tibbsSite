@@ -7,7 +7,6 @@
           <a href="#header"><li>COMPANY</li></a>
           <a href="#cases"><li>CASE STUDIES</li></a>
           <a href="#!/wor"><li>OUR WORK</li></a>
-          <a><li>DIRECTORS</li></a>
           <a href="#contact"><li>CONTACT</li></a>
           <li id="cancelButton"><i class="material-icons close" ng-click="$ctrl.close()">close</i></li>
         </ul>
