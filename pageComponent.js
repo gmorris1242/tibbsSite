@@ -42,8 +42,8 @@
       </div>
 
       <div class="quote">
-        <p>"Without a story worth telling, the most beautiful imagery becomes forgettable"</p>
-        <p>- Ronny Tibbs, Owner</p>
+        <p>"Without a story worth telling, the most beautiful imagery becomes forgettable."</p>
+
       </div>
 
       <div class="caseStudyTwo">
@@ -57,10 +57,10 @@
 
       <div class="contactDiv" id="contact">
         <h2>CONTACT</h2>
-        <p>Owner<br>
-          Ronny Tibbs <br>
+        <p>72 Auburn Ave.<br>
+          Pontiac MI 48342 <br>
           248.787.0728 <br>
-          ronny@tibbsinc.com
+          howdy@tibbsinc.com
         </p>
       </div>
 

@@ -106,7 +106,7 @@ header img {
 }
 
 #homeMenueBtn:hover {
-  color: #F7B84C;
+  color: crimson;
   cursor: pointer;
   transition: 300ms;
 }
@@ -139,7 +139,7 @@ header img {
 /* NOTE: culture */
 
 .cultureDiv {
-  background-image: url("images/jungle_small.jpg");
+  background-image: url("images/mountains_small.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
