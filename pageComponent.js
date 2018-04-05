@@ -6,15 +6,15 @@
         <ul>
           <a href="#header"><li>COMPANY</li></a>
           <a href="#cases"><li>CASE STUDIES</li></a>
-          <a href="#!/wor"><li>OUR WORK</li></a>
+          <a href="#!/work"><li>OUR WORK</li></a>
           <a href="#contact"><li>CONTACT</li></a>
-          <li id="cancelButton"><i class="material-icons close" ng-click="$ctrl.close()">close</i></li>
+          <li id="cancelButton"><i class="material-icons close" ng-click="$ctrl.closeNav()">close</i></li>
         </ul>
       </header>
 
       <div class="menuButtonDiv" ng-show="$ctrl.buttonShow">
         <img src="images/TiBBS Logo white.png" ng-show="$ctrl.buttonShow">
-        <i id="homeMenueBtn" class="material-icons close" ng-click="$ctrl.show()" ng-show="$ctrl.buttonShow">reorder</i>
+        <i id="homeMenueBtn" class="material-icons close" ng-click="$ctrl.showNav()" ng-show="$ctrl.buttonShow">reorder</i>
       </div>
 
       <div class="videoWrapper" id="header">
@@ -42,7 +42,6 @@
 
       <div class="quote">
         <p>"Without a story worth telling, the most beautiful imagery becomes forgettable."</p>
-
       </div>
 
       <div class="caseStudyTwo">
@@ -50,9 +49,6 @@
         <p>CASE STUDY COMMING SOON</p>
         <button>Case Study</button>
       </div>
-
-
-
 
       <div class="contactDiv" id="contact">
         <h2>CONTACT</h2>
@@ -70,20 +66,16 @@
         $ctrl.buttonShow = true;
         $ctrl.selectedDiv;
 
-        $ctrl.close = function(){
+        $ctrl.closeNav = function(){
           $ctrl.headerShow = false;
           $ctrl.buttonShow = true;
-        }
+        };
 
-        $ctrl.show = function(){
+        $ctrl.showNav = function(){
           $ctrl.headerShow = true;
           $ctrl.buttonShow = false;
         };
 
-        $ctrl.wideView = function(event) {
-          console.log(event);
-          $(event.target).addClass('wideGraphic');
-        }
       }
     };
 
