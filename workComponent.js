@@ -17,6 +17,8 @@
         <i id="workMenueBtn" class="material-icons close" ng-click="$ctrl.showNav()" ng-show="$ctrl.buttonShow">reorder</i>
       </div>
 
+      <h2 class="workPageTitles">Graphics You Don't Bring Home to Mother</h2>
+
       <div class="graphicsDiv" ng-switch="$ctrl.switch" ng-class="$ctrl.direction">
         <div class="graphic" ng-switch-when="1">
           <img src="graphics/4.png">
@@ -27,15 +29,16 @@
         <div class="graphic" ng-switch-when="3">
           <img src="graphics/bot1render.png">
         </div>
-      </div>
-      <div class="arrowsDiv">
-        <div class="back" ng-click="$ctrl.back()">
-          <i class="material-icons">chevron_left</i>
+        <div class="arrowsDiv">
+          <div class="back" ng-click="$ctrl.back()">
+            <i class="material-icons">chevron_left</i>
+          </div>
+          <div class="forward" ng-click="$ctrl.next()">
+            <i class="material-icons">chevron_right</i>
+          </div>
         </div>
-        <div class="forward" ng-click="$ctrl.next()">
-          <i class="material-icons">chevron_right</i>
-        </div>
       </div>
+
 
       `,
       controller: function() {
@@ -70,7 +73,7 @@
           if ($ctrl.switch > 1)
             {$ctrl.switch -= 1;
           }else {
-            $ctrl.switch = 1;
+            $ctrl.switch = 3;
           }
           console.log($ctrl.switch);
         }

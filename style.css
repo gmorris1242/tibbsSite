@@ -320,12 +320,17 @@ header img {
   transition: 300ms;
 }
 
+.workPageTitles {
+  text-align: center;
+  padding: 20px;
+  margin-top: 150px;
+}
+
 .graphicsDiv {
-  /* position: absolute; */
-  border: 1px dotted red;
-  height: 90vh;
+  position: relative; /* this stops the width scroll from showing up on transition*/
+  height: 100vh;
   width: 100%;
-  overflow: visible;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -345,26 +350,23 @@ header img {
 /* NOTE: graphic arrows */
 
 .arrowsDiv {
+  position: absolute;
   display: flex;
-  justify-content: center;
-  border: dotted green 1px;
+  justify-content: space-between;
+  width: 90%;
 }
 
 .back i{
-  font-size: 3em;
+  font-size: 5em;
 }
 
 .forward i{
-  font-size: 3em;
+  font-size: 5em;
 }
-
 
 @media (max-width:760px) {
 
-  .videoWrapper {
-    /* height:100vh; */
-  }
-
+  /* NOTE: main video */
   .titleVideo {
     object-fit: contain;
   }
@@ -373,21 +375,43 @@ header img {
     max-width: 200px;
   }
 
-  .menuButton i {
-    color: black;
-  }
-
+/* NOTE: nav */
   header ul {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   header {
-    flex-direction: column;
+    /* flex-direction: column; */
+    align-items: flex-start;
+    background-color: black;
   }
 
   header ul li {
     border: none;
     margin-top: 5px;
+  }
+
+  /* NOTE: work page */
+  .back i{
+    font-size: 3em;
+  }
+
+  .forward i{
+    font-size: 3em;
+  }
+
+  .arrowsDiv {
+    width: 100%;
+  }
+
+  .graphicsDiv {
+    height: 50vh;
+  }
+
+  .graphic {
+    width: 80%;
+    height: auto;
   }
 
 }
