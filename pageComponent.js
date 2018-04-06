@@ -50,6 +50,26 @@
         <button>Case Study</button>
       </div>
 
+      <div class="graphicsDiv" ng-switch="$ctrl.switch" ng-class="$ctrl.direction">
+        <div class="graphic" ng-switch-when="1">
+          <img src="graphics/4.png">
+        </div>
+        <div class="graphic" ng-switch-when="2">
+          <img src="graphics/6.png">
+        </div>
+        <div class="graphic" ng-switch-when="3">
+          <img src="graphics/bot1render.png">
+        </div>
+        <div class="arrowsDiv">
+          <div class="back" ng-click="$ctrl.back()">
+            <i class="material-icons">chevron_left</i>
+          </div>
+          <div class="forward" ng-click="$ctrl.next()">
+            <i class="material-icons">chevron_right</i>
+          </div>
+        </div>
+      </div>
+
       <div class="contactDiv" id="contact">
         <h2>CONTACT</h2>
         <p>72 Auburn Ave.<br>
@@ -64,7 +84,8 @@
         var $ctrl = this;
         $ctrl.headerShow = false;
         $ctrl.buttonShow = true;
-        $ctrl.selectedDiv;
+        $ctrl.switch = 1;
+        $ctrl.direction;
 
         $ctrl.closeNav = function(){
           $ctrl.headerShow = false;
@@ -74,6 +95,26 @@
         $ctrl.showNav = function(){
           $ctrl.headerShow = true;
           $ctrl.buttonShow = false;
+        };
+
+        $ctrl.next = function(){
+          $ctrl.direction = "forward";
+          if ($ctrl.switch > 0 && $ctrl.switch < 3)
+            {$ctrl.switch += 1;
+          }else {
+            $ctrl.switch = 1;
+          }
+          console.log($ctrl.switch);
+        };
+
+        $ctrl.back = function(){
+          $ctrl.direction = "backward";
+          if ($ctrl.switch > 1)
+            {$ctrl.switch -= 1;
+          }else {
+            $ctrl.switch = 3;
+          }
+          console.log($ctrl.switch);
         };
 
       }
